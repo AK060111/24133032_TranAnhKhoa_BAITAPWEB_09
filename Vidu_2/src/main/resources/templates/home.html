@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <title>Trang chủ</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <section class="card hero">
+        <span class="eyebrow">SPRING SECURITY 7</span>
+        <h1>Ví dụ 2 - Custom Login</h1>
+        <p>
+            Xin chào <strong th:text="${#authentication.principal.fullName}">Người dùng</strong>.
+            Bạn đã đăng nhập thành công bằng username hoặc email và phiên đăng nhập đang được lưu trong HTTP Session.
+        </p>
+        <div class="detail-grid">
+            <div><span>Username</span><strong th:text="${#authentication.principal.username}">username</strong></div>
+            <div><span>Email</span><strong th:text="${#authentication.principal.email}">email@example.com</strong></div>
+            <div><span>Vai trò</span><strong th:text="${#authentication.principal.role}">USER</strong></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
