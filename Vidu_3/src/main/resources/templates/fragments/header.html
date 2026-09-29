@@ -1,0 +1,4 @@
+<!DOCTYPE html><html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"><body>
+<header th:fragment="header" class="header"><a th:href="@{/}" class="brand">IOTSTAR SHOP</a><nav><a th:href="@{/}">Dashboard</a><a sec:authorize="isAuthenticated()" th:href="@{/products}">Products</a><a sec:authorize="hasRole('ADMIN')" th:href="@{/users}">Users</a></nav>
+<div class="account" sec:authorize="isAuthenticated()"><span sec:authentication="name"></span><form th:action="@{/logout}" method="post"><button type="submit" class="link-button">Đăng xuất</button></form></div>
+<div sec:authorize="isAnonymous()"><a th:href="@{/login}">Đăng nhập</a></div></header></body></html>

@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Maven
+target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# Temporary / installers
+tmp/
+*.msi
+
+# Documents
+*.pdf
+
+# Archives
+*.zip
+*.rar
+
+# OS
+.DS_Store
+Thumbs.db
